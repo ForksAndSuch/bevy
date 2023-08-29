@@ -245,7 +245,7 @@ pub fn ui_layout_system(
         };
 
     let resized = resize_events
-        .iter()
+        .read()
         .any(|resized_window| resized_window.window == primary_window_entity);
 
     // update window root nodes
